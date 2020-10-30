@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Clock</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            font-family: sans-serif;
+            font-size: 200px; 
+        }
+    </style>
+</head>
+<body>
+<div class="clock"></div>
+
+    <script>
+        function displayTime() {
+
+            const date = new Date();   // this point of time
+            const time = date.toLocaleTimeString(); 
+            document.querySelector(".clock").innerText = time; 
+            console.log(time);
+        }
+        displayTime(); 
+
+        setInterval(displayTime, 1000);     // refreshed jede Sekunde die aktuelle Zeit
+
+ </script>
+
+
+  
+</body>
+</html>
